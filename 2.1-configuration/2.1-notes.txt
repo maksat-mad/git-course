@@ -1,0 +1,54 @@
+git init
+git config user.name "Maksat"
+git config user.email "maksat.madeniyetov@gmail.com"
+cat .git/config
+
+3 деңгей бар: system, global, local (default)
+local => global => system
+
+git config --global user.name "Maksat"
+git config --list
+git config --list --global
+
+cat ~/.gitconfig
+Бұл сол dir-дағы .gitconfig файлдың ішін көру
+
+Керек емес, локал параметрлерді өшіру:
+git config --unset user.name
+git config --unset user.email
+немесе
+git config --remove-section user
+
+Бұл команда text editor-дың баптауларын өзгертеді,
+егер Windows болса, ол system деңгейінде істеліп қойған
+git config --global core.editor 'path -flags'
+
+git config --global alias.c config
+Енді git config --list -тің орнына 
+git c --list деп қолдана берсе болады
+
+git config -- global alias.c 'config --global'
+git c --list 
+Осы жерде жай c деген осының 'config --global' орынын басады
+
+git config alias.sayhi '!echo "hello"; echo "from git"'
+
+git sayhi 
+hello
+from git 
+
+осындай output қайтарады,
+бірнеше командаларды run жасау 
+бір команданың басында ! соңына ; жалғау арқылы
+
+git config -h
+бұл команда барлық git config командаларын көрсетеді
+тек қана config емес, git-тің басқа командалармен жұмыс істей береді
+
+git help config
+config жайлы толық ақпарат алу
+
+:/ іздеу, string немесе regex
+n іздеу алға
+shift + n іздеу артқа
+:q шығып кету
