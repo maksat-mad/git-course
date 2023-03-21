@@ -1,0 +1,20 @@
+working_dir: ішінде index.html
+working_dir = {
+    index.html
+}
+
+.git = {
+    index: {
+        index.html,
+        changes
+    },
+    repo: {
+        index.html,
+        FULL_HISTORY
+    }
+}
+
+git status
+Untracked файлдарды көрсетеді
+
+[working_dir] -> add -> [index] -> commit -> [repo]
